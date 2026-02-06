@@ -1,17 +1,11 @@
 package com.practice.Library.service;
 
-import com.practice.Library.repository.BorrowersRepository;
-import org.modelmapper.ModelMapper;
-import org.springframework.stereotype.Service;
+import com.practice.Library.dto.BorrowDTO;
 
-@Service
-public class BorrowersService {
+import java.util.List;
 
-    private final BorrowersRepository borrowrersRepository;
-    private final ModelMapper modelMapper;
+public interface BorrowersService {
 
-    public BorrowersService(BorrowersRepository borrowrersRepository, ModelMapper modelMapper) {
-        this.borrowrersRepository = borrowrersRepository;
-        this.modelMapper = modelMapper;
-    }
+    List<BorrowDTO> getAllBorrowers();
+
 }

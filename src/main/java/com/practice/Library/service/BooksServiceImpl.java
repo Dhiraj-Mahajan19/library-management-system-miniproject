@@ -9,15 +9,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class BooksService {
+public class BooksServiceImpl implements BookService {
     private final BooksRepository booksRepository;
     private final ModelMapper modelMapper;
 
-    public BooksService(BooksRepository booksRepository, ModelMapper modelMapper) {
+    public BooksServiceImpl(BooksRepository booksRepository, ModelMapper modelMapper) {
         this.booksRepository = booksRepository;
         this.modelMapper = modelMapper;
     }
